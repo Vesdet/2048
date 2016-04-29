@@ -1,0 +1,25 @@
+.container {
+    width: 500px;
+    height: 500px;
+}
+
+.row {
+    margin: 1px 0;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    background: #ddd;
+    margin: 0 1px;
+    display: inline-block;
+}
+
+.select {
+    width: 60px;
+    height: 60px;
+    background: red;
+    margin: 0 1px;
+    display: inline-block;
+    text-align: center;
+}
