@@ -12,6 +12,7 @@ var randTwo = function () {
 var checkForLose = function () {
     for (var i = 0; i < 16; i++) {
         if (desk[i] == 0) return;
+        if (booleanDesk[i] == true) return;
     }
     document.getElementById('lose').classList.remove('none');
     document.getElementById('lose').classList.add('container-state');
