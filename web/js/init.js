@@ -16,6 +16,10 @@ var newGame = function () {
     updateScore();
     randTwo();
     randTwo();
+    document.getElementById('win').classList.remove('container-state');
+    document.getElementById('win').classList.add('none');
+    document.getElementById('lose').classList.remove('container-state');
+    document.getElementById('lose').classList.add('none');
 };
 
 newGame();

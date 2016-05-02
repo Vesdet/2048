@@ -52,6 +52,7 @@ var moveHorizontal = function (count, direction) {
             }
             if (desk[i + direction] == item && !booleanDesk[i]) {
                 changeClass(i, i + direction, item, item * 2);
+                flag = true;
                 score += item * 2;
                 booleanDesk[i + direction] = true;
                 booleanDesk[i] = true;
@@ -71,6 +72,7 @@ var moveVertical = function (count, direction) {
             }
             if (desk[i + direction] == item && !booleanDesk[i]) {
                 changeClass(i, i + direction, item, item * 2);
+                flag = true;
                 score += item * 2;
                 booleanDesk[i + direction] = true;
                 booleanDesk[i] = true;
