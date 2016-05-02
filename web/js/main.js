@@ -11,16 +11,19 @@ desk[2] = 2;
 
 document.addEventListener("keydown", function (event) {
     if (event.which === 38) {   // top
+        up();
         randTwo();
     }
-    if (event.which === 39) {   // rigth
+    if (event.which === 39) {   // right
         right();
         randTwo();
     }
     if (event.which === 40) {   // bottom
+        bottom();
         randTwo();
     }
     if (event.which === 37) {   // left
+        left();
         randTwo();
     }
 });
@@ -33,24 +36,52 @@ var randTwo = function () {
     } else randTwo();
 };
 
-var right = function () {
-    move(2);
-    move(1);
-    move(2);
-    move(0);
-    move(1);
-    move(2);
+var left = function () {
+    moveHorizontal(1, -1);
+    moveHorizontal(2, -1);  moveHorizontal(1, -1);
+    moveHorizontal(3, -1);  moveHorizontal(2, -1);  moveHorizontal(1, -1);
 };
 
-var move = function (count) {
+var right = function () {
+    moveHorizontal(2, 1);
+    moveHorizontal(1, 1);  moveHorizontal(2, 1);
+    moveHorizontal(0, 1);  moveHorizontal(1, 1);  moveHorizontal(2, 1);
+};
+
+var bottom = function () {
+    moveVertical(2, 4);
+    moveVertical(1, 4);  moveVertical(2, 4);
+    moveVertical(0, 4);  moveVertical(1, 4);  moveVertical(2, 4);
+};
+
+var up = function () {
+    moveVertical(1, -4);
+    moveVertical(2, -4);  moveVertical(1, -4);
+    moveVertical(3, -4);  moveVertical(2, -4);  moveVertical(1, -4);
+};
+
+var moveHorizontal = function (count, direction) {
     desk.forEach(function (item, i, desk) {
         if (item == 0) return;
         if (i % 4 == count) {
-            if (desk[i + 1] == 0) {
-                changeClass(i, i + 1, item, item);
+            if (desk[i + direction] == 0) {
+                changeClass(i, i + direction, item, item);
                 return;
             }
-            if (desk[i + 1] == item) changeClass(i, i + 1, item, item * 2);
+            if (desk[i + direction] == item) changeClass(i, i + direction, item, item * 2);
+        }
+    })
+};
+
+var moveVertical = function (count, direction) {
+    desk.forEach(function (item, i, desk) {
+        if (item == 0) return;
+        if (Math.floor(i / 4) == count) {
+            if (desk[i + direction] == 0) {
+                changeClass(i, i + direction, item, item);
+                return;
+            }
+            if (desk[i + direction] == item) changeClass(i, i + direction, item, item * 2);
         }
     })
 };

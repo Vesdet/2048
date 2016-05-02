@@ -24,3 +24,27 @@
 .cell-8 {
     background-image: url('../img/8.png');
 }
+.cell-16 {
+    background-image: url('../img/16.png');
+}
+.cell-32 {
+    background-image: url('../img/32.png');
+}
+.cell-64 {
+    background-image: url('../img/64.png');
+}
+.cell-128 {
+    background-image: url('../img/128.png');
+}
+.cell-256 {
+    background-image: url('../img/256.png');
+}
+.cell-512 {
+    background-image: url('../img/2.png');
+}
+.cell-1024 {
+    background-image: url('../img/2.png');
+}
+.cell-2048 {
+    background-image: url('../img/2048.png');
+}
