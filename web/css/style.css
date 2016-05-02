@@ -1,50 +1,76 @@
 .container {
-    width: 300px;
-    height: 300px;
-}
-
-.row {
-    margin: 1px 0;
+    margin: 50px 35px;
+    padding: 50px;
+    width: 260px;
+    height: 260px;
 }
 
 .cell {
     width: 60px;
     height: 60px;
     background: #ddd;
-    margin: 0 1px;
+    margin: 1px 1px;
     display: inline-block;
 }
 
 .cell-2 {
     background-image: url('../img/2.png');
 }
+
 .cell-4 {
     background-image: url('../img/4.png');
 }
+
 .cell-8 {
     background-image: url('../img/8.png');
 }
+
 .cell-16 {
     background-image: url('../img/16.png');
 }
+
 .cell-32 {
     background-image: url('../img/32.png');
 }
+
 .cell-64 {
     background-image: url('../img/64.png');
 }
+
 .cell-128 {
     background-image: url('../img/128.png');
 }
+
 .cell-256 {
     background-image: url('../img/256.png');
 }
+
 .cell-512 {
-    background-image: url('../img/2.png');
+    background-image: url('../img/512.png');
 }
+
 .cell-1024 {
-    background-image: url('../img/2.png');
+    background-image: url('../img/1024.png');
 }
+
 .cell-2048 {
     background-image: url('../img/2048.png');
+}
+
+.label {
+    margin: 0 125px;
+    font-family: Arial, sans-serif;
+    line-height: 1em;
+    color: #ffd500;
+    font-weight: bold;
+    font-size: 80px;
+    text-shadow:    0 0 0 rgb(71, -23, 71),
+                    1px 1px 0 rgb(56, -38, 56),
+                    2px 2px 0 rgb(41, -53, 41),
+                    3px 3px 0 rgb(26, -68, 26),
+                    4px 4px 0 rgb(11, -83, 11),
+                    5px 5px 0 rgb(-4, -98, -4),
+                    6px 6px 5px rgba(0, 0, 0, 0.65),
+                    6px 6px 1px rgba(0, 0, 0, 0.5),
+                    0   0   5px rgba(0, 0, 0, .2);
 }
