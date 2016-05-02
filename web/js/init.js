@@ -3,16 +3,23 @@
  */
 var elements = document.getElementsByClassName("cell");
 var desk = [];
-for (var i = 0; i < 16; i++) {
-    desk[i] = 0;
-}
 var booleanDesk = [];
-randTwo();
-randTwo();
+var score = 0;
 
-var clearBooleanDesk = function () {
+var newGame = function () {
+    clearClasses();
     for (var i = 0; i < 16; i++) {
-        booleanDesk[i] = false;
+        desk[i] = 0;
     }
+    clearBooleanDesk();
+    score = 0;
+    updateScore();
+    randTwo();
+    randTwo();
 };
-clearBooleanDesk();
+
+newGame();
+
+
+
+
